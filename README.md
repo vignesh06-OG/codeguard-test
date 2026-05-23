@@ -1,32 +1,71 @@
 # 🛡️ CodeGuard AI — Autonomous PR Security Reviewer
 
-## Problem
+## 🚨 Problem
 Engineering teams merge vulnerable code daily without proper security review.
+Manual code reviews are slow, inconsistent, and miss critical security flaws.
 
-## Solution
+## ✅ Solution
 A 3-agent AI system that autonomously reviews GitHub Pull Requests,
-detects security vulnerabilities, and posts actionable comments directly on GitHub.
+detects security vulnerabilities, and posts actionable review comments
+directly on GitHub — automatically.
 
-## Architecture
-GitHub PR → Agent 1 (Security Auditor) → Agent 2 (Quality Analyst) 
-→ Agent 3 (Synthesizer) → GitHub Comment
+## 🏗️ Architecture
+GitHub PR → Agent 1 (Security Auditor)
+→ Agent 2 (Quality Analyst)
+→ Agent 3 (Synthesizer)
+→ GitHub Comment (Auto-posted)
 
-## Tech Stack
-- CrewAI (Multi-agent orchestration)
-- Google Gemini 2.5 Flash (LLM)
-- PyGithub (GitHub API)
-- Streamlit (Dashboard UI)
+## 🤖 How It Works
+1. Fetches open Pull Requests from target GitHub repo
+2. Agent 1 scans for OWASP Top 10 security vulnerabilities
+3. Agent 2 checks code quality, bugs, and performance issues
+4. Agent 3 synthesizes a structured review with Risk Score (0-10)
+5. Review is automatically posted as a GitHub PR comment
 
-## What We Built
-- 3-agent CrewAI system with specialized personas
-- Real-time PR diff fetching and chunking
-- Automated GitHub comment posting
-- Risk scoring system (0-10)
-- Live dashboard with token tracking
+## 🛠️ Tech Stack
+- **CrewAI** — Multi-agent orchestration
+- **Google Gemini 2.5 Flash** — LLM Brain
+- **PyGithub** — GitHub API integration
+- **Streamlit** — Live dashboard UI
+- **LangChain** — LLM framework
 
-## Demo
-[Video Link]
+## 🔍 What It Detects
+- SQL Injection & Command Injection
+- Hardcoded API Keys & Secrets
+- Broken Authentication & IDOR
+- Sensitive Data Exposure (PII in logs)
+- Memory Leaks & Resource Management
+- Missing Error Handling
+- Performance Anti-patterns
 
-## Team
-- Vignesh (Lead)
-- Sanzi
+## 🚀 Setup & Run
+```bash
+# 1. Clone the repo
+git clone https://github.com/vignesh06-OG/codeguard-test
+
+# 2. Create virtual environment
+py -3.11 -m venv venv311
+venv311\Scripts\Activate.ps1
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Create .env file
+GEMINI_API_KEY=your_key_here
+GITHUB_TOKEN=your_token_here
+GITHUB_REPO=owner/repo-name
+
+# 5. Run
+python -m streamlit run app.py
+```
+
+## 📊 Demo
+> CodeGuard detected SQL Injection, Hardcoded API Keys & Memory Leaks
+> in a test PR — Risk Score: 9/10 — Automatically posted on GitHub.
+
+## 👥 Team
+- **Vignesh** (Lead)
+- **Sanzi**
+
+## 🏆 Built For
+AI Hackathon — May 2026
