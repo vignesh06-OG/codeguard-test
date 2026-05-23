@@ -1,5 +1,6 @@
 # codeguard-test
 # 🛡️ CodeGuard AI — Autonomous PR Security Reviewer
+feature/auth-module-v2
 
 ## Problem
 Engineering teams merge vulnerable code daily without proper security review.
