@@ -1,34 +1,17 @@
-# codeguard-test
-# 🛡️ CodeGuard AI — Autonomous PR Security Reviewer
-feature/auth-module-v2
+# User Authentication Module
+import sqlite3
 
-## Problem
-Engineering teams merge vulnerable code daily without proper security review.
+def login(username, password):
+    API_KEY = "sk-prod-9xKpL2mNqR8vT4wY"  # hardcoded secret
+    conn = sqlite3.connect("users.db")
+    cursor = conn.cursor()
+    query = f"SELECT * FROM users WHERE username='{username}' AND password='{password}'"
+    cursor.execute(query)
+    return cursor.fetchone()
 
-## Solution
-A 3-agent AI system that autonomously reviews GitHub Pull Requests,
-detects security vulnerabilities, and posts actionable comments directly on GitHub.
-
-## Architecture
-GitHub PR → Agent 1 (Security Auditor) → Agent 2 (Quality Analyst) 
-→ Agent 3 (Synthesizer) → GitHub Comment
-
-## Tech Stack
-- CrewAI (Multi-agent orchestration)
-- Google Gemini 2.5 Flash (LLM)
-- PyGithub (GitHub API)
-- Streamlit (Dashboard UI)
-
-## What We Built
-- 3-agent CrewAI system with specialized personas
-- Real-time PR diff fetching and chunking
-- Automated GitHub comment posting
-- Risk scoring system (0-10)
-- Live dashboard with token tracking
-
-## Demo
-[Video Link]
-
-## Team
-- Vignesh (Lead)
-- Sanzi
+def get_user_data(user_id):
+    conn = sqlite3.connect("users.db")
+    cursor = conn.cursor()
+    cursor.execute(f"SELECT * FROM users WHERE id={user_id}")
+    print(f"[LOG] Fetching PII data for user: {user_id}")
+    return cursor.fetchall()
