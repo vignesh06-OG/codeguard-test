@@ -67,5 +67,22 @@ python -m streamlit run app.py
 - **Vignesh** (Lead)
 - **Sanzi**
 
+- ## Our Contribution vs AI-Generated Output
+
+### We Built (Human Contribution):
+- Problem identification & solution design
+- 3-agent architecture decision
+- GitHub API integration logic
+- Streamlit UI design & layout
+- CrewAI orchestration & agent personas
+- Security vulnerability categories defined
+- Debugging & environment setup (Python 3.11 migration)
+- End-to-end system integration & testing
+
+### AI-Assisted (Tools Used):
+- GitHub Copilot / Claude: Code suggestions & debugging help
+- Google Gemini 2.5 Flash: LLM for actual code review
+- CrewAI: Agent framework
+
 ## 🏆 Built For
 AI Hackathon — May 2026
