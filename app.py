@@ -47,7 +47,7 @@ st.markdown("""
 
     /* Glitch Effect */
     .glitch {
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'Rajdhani', sans-serif;
         font-size: 46px;
         font-weight: 900;
         color: #06b6d4;
@@ -130,19 +130,19 @@ st.markdown("""
         margin-bottom: 10px;
     }
     .metric-val-cyan { 
-        font-family: 'Orbitron', sans-serif; 
+        font-family: 'Rajdhani', sans-serif; 
         color: #06b6d4; font-size: 46px; font-weight: 700;
         text-shadow: 0 0 20px rgba(6,182,212,0.8), 0 0 40px rgba(6,182,212,0.4);
         line-height: 1; 
     }
     .metric-val-red { 
-        font-family: 'Orbitron', sans-serif; 
+        font-family: 'Rajdhani', sans-serif; 
         color: #f43f5e; font-size: 46px; font-weight: 700;
         text-shadow: 0 0 20px rgba(244,63,94,0.8), 0 0 40px rgba(244,63,94,0.4);
         line-height: 1; 
     }
     .metric-val-purple { 
-        font-family: 'Orbitron', sans-serif; 
+        font-family: 'Rajdhani', sans-serif; 
         color: #a78bfa; font-size: 46px; font-weight: 700;
         text-shadow: 0 0 20px rgba(167,139,250,0.8), 0 0 40px rgba(167,139,250,0.4);
         line-height: 1; 
